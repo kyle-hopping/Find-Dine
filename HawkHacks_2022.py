@@ -11,7 +11,7 @@ load_dotenv()
 
 gmaps = googlemaps.Client(os.getenv('API_key'))
 
-# km to meters
+# km to meters - maximum radius for Places API is 50,000m
 def km_to_meters(km):
     num = km * 1000
     if num > 50000:
@@ -102,6 +102,7 @@ else:
     print()
 
     print('Don\'t like what you see? Take a look at all the restaurants nearby.')
+    print()
 
 for place in results:
     print(place['name'])
