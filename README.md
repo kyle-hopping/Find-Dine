@@ -1,4 +1,4 @@
-# Restaurant-Selector
+# Find-Dine
 Trouble picking food? WE GOT YOU.
 
 Using the Google Geocoding and Places APIs, we created a solution for your indecisive needs.
