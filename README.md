@@ -1,2 +1,2 @@
-# HawkHacks_2022
+# Restaurant-Selector
 Trouble picking food? WE GOT YOU.
