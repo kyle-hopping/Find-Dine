@@ -1,4 +1,4 @@
-# Welcome! This is a project created by two students, Tiffanie and Joshua! Hopefully we'll help you decide on a place to eat.
+# Welcome! This is a project created by three students, Tiffanie, William, and Joshua! Hopefully we'll help you decide on a place to eat.
 
 import json
 import googlemaps
@@ -93,7 +93,7 @@ else:
     print('Total User Ratings: {:,}'.format(int(total_ratings[random])))
     print()
 
-    print('Top rated restaurant:')
+    print('Top Rated restaurant:')
     print(top_names)
     print(top_address)
     print('Price Level:        {}'.format('$' * int(top_price)))
