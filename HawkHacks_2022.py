@@ -93,7 +93,7 @@ else:
     print('Total User Ratings: {:,}'.format(int(total_ratings[random])))
     print()
 
-    print('Recommended restaurant:')
+    print('Top rated restaurant:')
     print(top_names)
     print(top_address)
     print('Price Level:        {}'.format('$' * int(top_price)))
