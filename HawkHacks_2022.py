@@ -7,6 +7,8 @@ from random import randint
 import time
 from dotenv import load_dotenv
 import os
+import customtkinter
+
 load_dotenv()
 
 gmaps = googlemaps.Client(os.getenv('API_key'))
@@ -125,3 +127,39 @@ while y:
             print('Total User Ratings: {:,}\n'.format(int(place['user_ratings_total'])))
     except:
         y = False
+
+#Display 
+def test():
+    print(entry1.get(), op1.get(), op2.get(),entry2.get())
+
+root = customtkinter.CTk()
+root.geometry("800x550")
+root.title("Find Restaurant")
+
+frame = customtkinter.CTkFrame(master=root)
+frame.pack(pady=50, padx= 200, fill="both", expand=True)
+lable = customtkinter.CTkLabel(master=frame, text="Find Restaurant") #text_font=("Roboto", 24)
+lable.pack(pady=12, padx = 10) 
+
+entry1 = customtkinter.CTkEntry(master=frame, placeholder_text="Address", width=300)
+entry1.pack(pady = 25, padx = 10)
+
+lable2 = customtkinter.CTkLabel(master=frame, text="Enter minimum price range")
+lable2.pack(pady=12, padx = 10) 
+op1 = customtkinter.CTkOptionMenu(master=frame, values=["0","1","2","3","4"])
+op1.pack(pady = 12, padx = 10)
+op1.set("0")
+
+lable3 = customtkinter.CTkLabel(master=frame, text="Enter minimum price range")
+lable3.pack(pady=12, padx = 10) 
+op2 = customtkinter.CTkOptionMenu(master=frame, values=["0","1","2","3","4"])
+op2.pack(pady = 12, padx = 10)
+op2.set("0")
+
+entry2 = customtkinter.CTkEntry(master=frame, placeholder_text="How far are you willing to travel (km)?", width=300)
+entry2.pack(pady = 12, padx = 10)
+
+button = customtkinter.CTkButton(master=frame, text="Confirm", command=test, width=300)
+button.pack(pady = 12, padx = 10)
+
+root.mainloop()
